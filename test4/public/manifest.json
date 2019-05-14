@@ -1,0 +1,15 @@
+{
+  "short_name": "Test 4",
+  "name": "Test 4 for wargaming",
+  "icons": [
+    {
+      "src": "https://cdn-wglc.gcdn.co/uploads/public/layouts/2017_07_21__12_21_50_XBOXLIGHT_RU/variative_content/RU/favicon/elements/f192/1311125/favicon-192x192_1500363328.png",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}

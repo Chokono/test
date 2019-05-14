@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Test1</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="./main.css">
+</head>
+<body>
+    <div class="test test1">
+        <h1>Задание 1</h1>
+        <form class="test1__container test1__container__way2">
+            <span class="test1__inputWrapper test1__inputWrapper__way2">
+                <input type="text" required class="test1__field" placeholder="Почему">
+                <div class="test1__inputReset" onclick="this.parentNode.getElementsByTagName('input')[0].value = ''"></div>
+            </span>
+            <input type="submit" class="test1__submit test1__submit__way2" value="Найти">
+        </form>
+        <form class="test1__container test1__container__way2">
+            <span class="test1__inputWrapper test1__inputWrapper__way2">
+                <input type="text" required class="test1__field" placeholder="Why">
+                <div class="test1__inputReset" onclick="this.parentNode.getElementsByTagName('input')[0].value = ''"></div>
+            </span>
+            <input type="submit" class="test1__submit test1__submit__way2" value="go">
+        </form>
+    </div>
+    <div class="test test2">
+        <h1>Задание 2</h1>
+        <div id="test2__container" class="test2__menuContainer" tabindex="0">
+            <div id="test2__menu" class="test2__menu test2__menuText">World of tanks</div>
+            <ul id="test2__ul" class="test2__ul">
+                <li class="test2__li test2__menuText active" data-key="1">World of tanks</li>
+                <li class="test2__li test2__menuText" data-key="2">World of warplanes</li>
+                <li class="test2__li test2__menuText" data-key="3">World of warships</li>
+            </ul>
+        </div>
+    </div>
+    <div class="test test3">
+        <h1>Задание 3</h1>
+        <h5>Почему не рассматриваются заявки с жалобами на нарушение Правил игры?</h5>
+        <div class="test3__colums">
+            <p class="test3__text">
+                После введения функционала "Пожаловаться" не рассматриваются заявки, созданные в Центр поддержки пользователей о нарушении Правил игры по следующим пунктам:
+            </p>
+            <ol class="test3__ol">
+                <li class="test3__li">
+                    "Оскорбления и провокации"
+                    <p class="test3__liText">
+                        В данный пункт входит:<br>
+                        - использование ненормативной лексики и оскорбление собеседников, применение унизительных кличек и прозвищ по расовому, национальному, религиозному либо половому признаку, а также провоцирование собеседника к их использованию;<br>
+                        - клевета, размещение заведомо ложной информации об Игре, Администрации, Модератораз или Пользователях;<br>
+                        - угрозы реальной расправы в отношении представителей Администрации Проекта. Все виды соглашения.
+                    </p>
+                </li>
+                <li class="test3__li">
+                    "Неинформативные сообщения"
+                    <p class="test3__liText">
+                        В данный пункт входит:<br>
+                        - размещение информации (сообщения, фразы, символов и пр.), направленной на отвлечение Пользователей от темы беседы (флуд);<br>
+                        - все выды рекламных сообщений, в частности ссылки на интернет ресурсы.
+                    </p>
+                </li>
+                <p class="test3__olText">Также не рассматриваются следующие заявки, созданные в Центр поддержки пользователей о нарушении Правил игры:</p>
+                <li class="test3__li">"Раскрытие позиций союзников"</li>
+                <li class="test3__li">"Выталкивание союзника"</li>
+                <li class="test3__li">"Неспортивное поведение"</li>
+                <li class="test3__li">"Повреждение союзников"</li>
+            </ol>
+        </div>
+    </div>
+    <script src="./main.js"></script>
+</body>
+</html>

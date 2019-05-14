@@ -1,0 +1,97 @@
+.main {
+  padding: 50px;
+}
+
+.main__title {
+  font-size: 24px;
+}
+
+.main__text {
+  margin: 0;
+}
+
+.selectedElementContainer {
+  display: inline-block;
+  padding: 10px;
+  background-color: black;
+  color: white;
+  margin: 1.7em 20px 1.7em 0;
+  width: 190px;
+  box-sizing: border-box;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 20px;
+  position: relative;
+}
+
+.selectedElementContainer::after {
+  display: block;
+  content: '';
+  position: absolute;
+  top: 8px;
+  background-color: white;
+  width: 1px;
+  height: 24px;
+  right: 40px;
+}
+
+.selectedElementContainer__close {
+  position: absolute;
+  height: 100%;
+  width: 40px;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+}
+
+.selectedElementContainer__close::after,
+.selectedElementContainer__close::before,
+.popup__close::after,
+.popup__close::before {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 2px;
+  height: 12px;
+  background-color: white;
+  top: 14px;
+  left: 19px;
+  cursor: pointer;
+}
+
+.selectedElementContainer__close::after {
+  transform: rotate(30deg);
+}
+
+.selectedElementContainer__close::before {
+  transform: rotate(-30deg);
+}
+
+.main__changeChoice {
+  font-size: 14px;
+  line-height: 20px;
+  padding: 10px 40px;
+  background-color: #9ca85a;
+  color: #3f3f3f;
+  cursor: pointer;
+}
+
+.popup__overflow {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 10;
+}
+
+.popup__container {
+  position: absolute;
+  max-width: 800px;
+  width: 95%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #3f3f3f;
+}
