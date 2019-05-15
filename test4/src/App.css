@@ -1,0 +1,21 @@
+.main {
+  padding: 50px;
+}
+
+.main__title {
+  font-size: 24px;
+}
+
+.main__text {
+  margin: 0 0 10px;
+}
+
+.main__changeChoice {
+  font-size: 14px;
+  line-height: 20px;
+  padding: 10px 40px;
+  background-color: #9ca85a;
+  color: #3f3f3f;
+  cursor: pointer;
+  margin: 1em 0;
+}

@@ -1,12 +1,11 @@
 import React, { Component } from 'react';
-
-import Add from './Add';
+import './App.css';
+import Popup from './Popup';
 
 let arrayOfElements = [];
 for (let i = 1; i < 301; i++) {
   arrayOfElements.push(`Элемент ${i}`);
 }
-console.log(arrayOfElements);
 
 class App extends Component {
   constructor(props) {
@@ -15,13 +14,13 @@ class App extends Component {
       selectedElements: ['Элемент 5', 'Элемент 125'],
       isPopupOpen: false,
     };
-    this.removeElement = this.removeElement.bind(this);
-    this.addElenemt = this.addElenemt.bind(this);
-    this.openPopup = this.openPopup.bind(this);
-    this.closePopup = this.closePopup.bind(this);
+    this.removeElements = this.removeElements.bind(this);
+    this.onOpenPopup = this.onOpenPopup.bind(this);
+    this.onClosePopup = this.onClosePopup.bind(this);
+    this.saveChanges = this.saveChanges.bind(this);
   }
 
-  removeElement(val) {
+  removeElements(val) {
     return () => {
       this.setState(state => ({
         selectedElements: state.selectedElements.filter(elem => elem !== val),
@@ -29,28 +28,28 @@ class App extends Component {
     };
   }
 
-  addElenemt(val) {
-    return () => {
-      this.setState(state => ({
-        selectedElements: state.selectedElements.push(val),
-      }));
-    };
-  }
-
-  openPopup() {
+  onOpenPopup() {
     this.setState(() => ({
       isPopupOpen: true,
     }));
   }
 
-  closePopup() {
+  onClosePopup() {
     this.setState(() => ({
       isPopupOpen: false,
     }));
   }
 
+  saveChanges(arr) {
+    return () => {
+      this.setState(() => ({
+        selectedElements: arr,
+        isPopupOpen: false,
+      }));
+    };
+  }
+
   render() {
-    console.log(this.state.isPopupOpen);
     return (
       <div className="main">
         <h1 className="main__title">Выбор элементов</h1>
@@ -67,15 +66,23 @@ class App extends Component {
             {el}
             <div
               className="selectedElementContainer__close"
-              onClick={this.removeElement(el)}
+              onClick={this.removeElements(el)}
             />
           </div>
         ))}
         <br />
-        <button className="main__changeChoice" onClick={this.openPopup}>
+        <button className="main__changeChoice" onClick={this.onOpenPopup}>
           Изменить мой выбор
         </button>
-        {this.state.isPopupOpen && <Add />}
+        {this.state.isPopupOpen && (
+          <Popup
+            onClosePopup={this.onClosePopup}
+            arrayOfElements={arrayOfElements}
+            selectedElements={this.state.selectedElements}
+            removeElements={this.removeElements}
+            saveChanges={this.saveChanges}
+          />
+        )}
       </div>
     );
   }
