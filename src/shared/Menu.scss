@@ -1,0 +1,78 @@
+@import './scss/variables';
+
+.menu__container {
+	display: inline-block;
+	line-height: 56px;
+	vertical-align: top;
+}
+
+.menu__item {
+	padding: 0 5px;
+	line-height: 26px;
+	vertical-align: middle;
+	cursor: pointer;
+	margin-right: 36px;
+	font-size: 18px;
+	color: $menu-simple;
+	text-decoration: none;
+	position: relative;
+}
+
+.menu__item:focus {
+	border: none;
+	outline: none;
+}
+
+.menu__item.active::after {
+	content: '';
+	display: block;
+	border-radius: 2px;
+	height: 2px;
+	width: 100%;
+	background-color: $menu-simple;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}
+
+.menu__item.active:hover::after {
+	background-color: $menu-hover;
+}
+
+.menu__item:hover {
+	color: $menu-hover;
+}
+
+.menu__filter {
+	display: inline-block;
+	line-height: 39px;
+	height: 39px;
+	width: 39px;
+	margin-left: 20px;
+	vertical-align: middle;
+	cursor: pointer;
+}
+
+.menu__filter path {
+	fill: $menu-simple;
+}
+
+.menu__filter:hover path {
+	fill: $menu-hover;
+}
+
+.menu__filter rect {
+	stroke: transparent;
+}
+
+.menu__filter:hover rect {
+	stroke: $menu-hover;
+}
+
+.menu__filter.active path {
+	fill: $filter-active;
+}
+
+.menu__filter.active rect {
+	stroke: $filter-active;
+}

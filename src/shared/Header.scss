@@ -1,0 +1,26 @@
+@import './scss/variables';
+
+.header__container {
+	background-color: $apple-green;
+	padding: 30px 35px;
+	text-align: right;
+}
+
+.header__logo {
+	height: 56px;
+	width: 147px;
+	display: inline-block;
+	float: left;
+}
+
+.header__logoText {
+	line-height: 56px;
+text-transform: uppercase;
+display: inline-block;
+margin: 0;
+    margin-left: 0px;
+color: white;
+font-size: 18px;
+vertical-align: top;
+margin-left: 15px;
+}
